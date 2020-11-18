@@ -21,7 +21,7 @@ public class CmConverterTest {
     }
 
     @Test
-    public void shouldReturnInches() throws IOException {
+    public void convertToInches_shouldReturnInchesOfOneCm() {
         double actual = sut.convertToInches(1.0);
         double expected = 0.393701;
         assertEquals(expected, actual, 0.000001);
