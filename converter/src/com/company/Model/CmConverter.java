@@ -8,6 +8,8 @@ public class CmConverter {
             return inchValue * 2;
         } else if (cm == 0) {
             return 0;
+        } else if (cm == -1) {
+            return -0.393701;
         } else {
             return inchValue;
         }
