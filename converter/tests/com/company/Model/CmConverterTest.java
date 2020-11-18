@@ -40,4 +40,11 @@ public class CmConverterTest {
         double expected = 0;
         assertEquals(expected, actual, 0.000001);
     }
+
+    @Test
+    public void convertToInches_shouldReturnInchesOfNegativeOneCm() {
+        double actual = sut.convertToInches(-1.0);
+        double expected = -0.393701;
+        assertEquals(expected, actual, 0.000001);
+    }
 }
