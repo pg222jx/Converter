@@ -26,4 +26,11 @@ public class CmConverterTest {
         double expected = 0.393701;
         assertEquals(expected, actual, 0.000001);
     }
+
+    @Test
+    public void convertToInches_shouldReturnInchesOfTwoCm() {
+        double actual = sut.convertToInches(2.0);
+        double expected = 0.787402;
+        assertEquals(expected, actual, 0.000001);
+    }
 }
