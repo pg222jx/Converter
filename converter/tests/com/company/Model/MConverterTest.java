@@ -34,4 +34,11 @@ public class MConverterTest {
         assertEquals(expected, actual, 0.000001);
     }
 
+    @Test
+    public void convertFromInches_shouldReturnNegativeOneInchesInMeter() {
+        double actual = sut.convertFromInches(-1.0);
+        double expected = -0.0254;
+        assertEquals(expected, actual, 0.000001);
+    }
+
 }
