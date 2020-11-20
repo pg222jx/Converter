@@ -27,4 +27,11 @@ public class MConverterTest {
         assertEquals(expected, actual, 0.000001);
     }
 
+    @Test
+    public void convertFromInches_shouldReturnTwoInchesInMeter() {
+        double actual = sut.convertFromInches(2.0);
+        double expected = 0.0508;
+        assertEquals(expected, actual, 0.000001);
+    }
+
 }
