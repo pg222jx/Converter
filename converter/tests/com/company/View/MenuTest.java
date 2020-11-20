@@ -28,7 +28,7 @@ public class MenuTest {
     }
 
     @Test
-    public void shouldTakeUserInput() {
+    public void getInput_shouldReturnM() {
 
         String input = "m";
         InputStream in = new ByteArrayInputStream(input.getBytes());
