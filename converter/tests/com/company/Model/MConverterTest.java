@@ -62,4 +62,11 @@ public class MConverterTest {
         assertEquals(expected, actual, 0.000001);
     }
 
+    @Test
+    public void convertFromFoot_shouldReturnNegativeOneFootInMeter() {
+        double actual = sut.convertFromFoot(-1.0);
+        double expected = -0.3048;
+        assertEquals(expected, actual, 0.000001);
+    }
+
 }
