@@ -13,6 +13,8 @@ public class MConverter {
 
         if (foot == 2) {
             return footValue * 2;
+        } else if(foot == -1){
+            return footValue * -1;
         }
         return footValue;
     }
