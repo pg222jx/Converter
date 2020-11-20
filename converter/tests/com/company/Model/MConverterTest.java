@@ -55,4 +55,11 @@ public class MConverterTest {
         assertEquals(expected, actual, 0.000001);
     }
 
+    @Test
+    public void convertFromFoot_shouldReturnTwoFootInMeter() {
+        double actual = sut.convertFromFoot(2.0);
+        double expected = 0.6096;
+        assertEquals(expected, actual, 0.000001);
+    }
+
 }
