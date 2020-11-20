@@ -8,12 +8,16 @@ public class MConverter {
         return inches * inchValue;
     }
 
+    /**
+     * @param foot double
+     * @return Value of the alculations of fott in meter
+     */
     public double convertFromFoot(double foot) {
         double footValue = 0.3048;
 
         if (foot == 2) {
             return footValue * 2;
-        } else if(foot == -1){
+        } else if (foot == -1){
             return footValue * -1;
         }
         return footValue;
