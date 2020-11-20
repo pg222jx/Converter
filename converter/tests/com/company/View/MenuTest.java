@@ -34,7 +34,17 @@ public class MenuTest {
         InputStream in = new ByteArrayInputStream(input.getBytes());
         System.setIn(in);
 
-        assertEquals(input, sut.readLine());
+        assertEquals(input, sut.getInput());
+    }
+
+    @Test
+    public void getInput_shouldReturnCm() {
+
+        String input = "cm";
+        InputStream in = new ByteArrayInputStream(input.getBytes());
+        System.setIn(in);
+
+        assertEquals(input, sut.getInput());
     }
 
 }
