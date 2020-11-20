@@ -10,7 +10,7 @@ public class MConverter {
 
     /**
      * @param foot double
-     * @return Value of the alculations of fott in meter
+     * @return Value of the calculations of foot in meter
      */
     public double convertFromFoot(double foot) {
         double footValue = 0.3048;
