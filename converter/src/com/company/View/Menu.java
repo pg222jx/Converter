@@ -19,6 +19,6 @@ public class Menu {
      */
     public String readLine() {
         Scanner sc = new Scanner(System.in);
-        return "";
+        return "m";
     }
 }
