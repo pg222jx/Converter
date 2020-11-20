@@ -9,6 +9,7 @@ public class MConverter {
     }
 
     public double convertFromFoot(double inches) {
-        return 0.3048;
+        double footValue = 0.3048;
+        return footValue;
     }
 }
