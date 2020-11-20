@@ -7,8 +7,8 @@ public class Menu {
      *
      * @return
      */
-    public Input.MenuChoices getInput() {
-        if (readLine() == "m") {
+    public Input.MenuChoices getMenuChoice() {
+        if (getInput() == "m") {
             return Input.MenuChoices.Meter;
         }
         return null;
@@ -17,7 +17,7 @@ public class Menu {
     /**
      *
      */
-    public String readLine() {
+    public String getInput() {
         Scanner sc = new Scanner(System.in);
         return "m";
     }
