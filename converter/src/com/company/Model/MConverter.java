@@ -7,4 +7,8 @@ public class MConverter {
 
         return inches * inchValue;
     }
+
+    public double convertFromFoot(double inches) {
+        return 0;
+    }
 }

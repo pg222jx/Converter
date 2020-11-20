@@ -48,4 +48,11 @@ public class MConverterTest {
         assertEquals(expected, actual, 0.000001);
     }
 
+    @Test
+    public void convertFromFoot_shouldReturnOneFootInMeter() {
+        double actual = sut.convertFromInches(1.0);
+        double expected = 0.3048;
+        assertEquals(expected, actual, 0.000001);
+    }
+
 }
