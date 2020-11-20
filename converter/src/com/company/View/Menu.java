@@ -19,6 +19,6 @@ public class Menu {
      */
     public String getInput() {
         Scanner sc = new Scanner(System.in);
-        return "m";
+        return "cm";
     }
 }
