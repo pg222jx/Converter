@@ -41,4 +41,11 @@ public class MConverterTest {
         assertEquals(expected, actual, 0.000001);
     }
 
+    @Test
+    public void convertFromInches_shouldReturnZeroInchesInMeter() {
+        double actual = sut.convertFromInches(0.0);
+        double expected = 0.0;
+        assertEquals(expected, actual, 0.000001);
+    }
+
 }
