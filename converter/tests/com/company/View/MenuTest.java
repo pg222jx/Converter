@@ -89,7 +89,7 @@ public class MenuTest {
     }
 
     @Test(expected = IllegalArgumentException.class)
-    public void getValue_shouldThrowIllegalArgumentExceptionIfValIsA() {
+    public void getValue_shouldThrowIllegalArgumentExceptionIfValIsChar() {
         sut.getValue("A");
     }
 
