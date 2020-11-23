@@ -25,7 +25,7 @@ public class Menu {
      * @return The value converted to double.
      */
     public double getValue(String val) {
-        if (val == "A") {
+        if (val == "A" || val == "" ) {
             throw new IllegalArgumentException();
         } else if (val == "0.45") {
             return 0.45;
