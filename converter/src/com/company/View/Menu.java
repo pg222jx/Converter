@@ -30,7 +30,6 @@ public class Menu {
         } else if (val == "0.45") {
             return 0.45;
         }
-
         return 0.37;
     }
 
