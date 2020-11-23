@@ -5,7 +5,7 @@ public class Menu {
 
     /**
      * @param input String
-     * @return the chosen menu option.
+     * @return Input - The chosen menu option.
      */
     public Input getMenuChoice(String input) {
         if (input == "m") {
