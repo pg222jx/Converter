@@ -97,4 +97,14 @@ public class MenuTest {
     public void getValue_shouldThrowIllegalArgumentExceptionIfValIsEmpty() {
         sut.getValue("");
     }
+
+    @Test
+    public void getValue_shouldConvertStringIntToDouble() {
+
+        double actual = sut.getValue("1");
+        double expected = 1.0;
+
+        assertEquals(expected, actual, 0.01);
+    }
+
 }
