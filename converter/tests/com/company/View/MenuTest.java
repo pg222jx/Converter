@@ -87,4 +87,9 @@ public class MenuTest {
 
         assertEquals(expected, actual, 0.01);
     }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void getValue_shouldThrowIllegalArgumentExceptionIfValIsA() {
+        sut.getValue("A");
+    }
 }
