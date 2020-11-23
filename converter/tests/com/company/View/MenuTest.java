@@ -78,4 +78,13 @@ public class MenuTest {
 
         assertEquals(expected, actual);
     }
+
+    @Test
+    public void getValue_shouldConvertStringNumberToDouble() {
+
+        double actual = sut.getValue("0.45");
+        double expected = 0.45;
+
+        assertEquals(expected, actual, 0.01);
+    }
 }

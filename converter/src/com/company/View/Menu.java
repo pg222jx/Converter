@@ -20,6 +20,11 @@ public class Menu {
         return null;
     }
 
+    public double getValue(String val) {
+
+        return 0.37;
+    }
+
     /**
      * @return String- The users input from console
      */
