@@ -55,4 +55,13 @@ public class MenuTest {
         assertEquals(expected, actual);
     }
 
+    @Test
+    public void getMenuChoice_shouldReturnInputCentimeter() {
+
+        Input actual = sut.getMenuChoice("c");
+        Input expected = Input.Centimeter;
+
+        assertEquals(expected, actual);
+    }
+
 }

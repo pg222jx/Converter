@@ -1,6 +1,7 @@
 package com.company.View;
 
     enum Input {
-        Meter
+        Meter,
+        Centimeter
     }
 
