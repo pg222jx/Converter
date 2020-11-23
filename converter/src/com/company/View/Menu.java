@@ -4,8 +4,8 @@ import java.util.Scanner;
 public class Menu {
 
     /**
-     *
-     * @return
+     * @param input String
+     * @return the chosen menu option.
      */
     public Input getMenuChoice(String input) {
         if (input == "m") {
