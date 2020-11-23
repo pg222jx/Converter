@@ -19,7 +19,7 @@ public class Menu {
     }
 
     /**
-     *
+     * @return String- The users input from console
      */
     public String getInput() {
         Scanner sc = new Scanner(System.in);

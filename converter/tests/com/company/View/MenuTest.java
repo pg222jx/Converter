@@ -14,9 +14,6 @@ import static org.junit.Assert.assertEquals;
 public class MenuTest {
     private Menu sut;
 
-    @Mock
-    private Input inputMock;
-
     @Before
     public void setUp() throws Exception {
         sut = new Menu();
