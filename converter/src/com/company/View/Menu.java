@@ -8,7 +8,9 @@ public class Menu {
      * @return
      */
     public Input.MenuChoices getMenuChoice(String input) {
-
+        if (input == "m") {
+            return Input.MenuChoices.Meter;
+        }
         return null;
     }
 
