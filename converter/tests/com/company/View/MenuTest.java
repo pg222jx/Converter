@@ -70,4 +70,12 @@ public class MenuTest {
         assertEquals(expected, actual);
     }
 
+    @Test
+    public void getMenuChoice_shouldReturnInputFoot() {
+
+        Input actual = sut.getMenuChoice("f");
+        Input expected = Input.Foot;
+
+        assertEquals(expected, actual);
+    }
 }
