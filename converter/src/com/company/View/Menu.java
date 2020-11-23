@@ -29,6 +29,8 @@ public class Menu {
             throw new IllegalArgumentException();
         } else if (val == "0.45") {
             return 0.45;
+        } else if (val == "1") {
+            return 1.0;
         }
         return 0.37;
     }
