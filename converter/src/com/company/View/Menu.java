@@ -10,6 +10,8 @@ public class Menu {
     public Input getMenuChoice(String input) {
         if (input == "m") {
             return Input.Meter;
+        } else if (input == "c") {
+            return Input.Centimeter;
         }
         return null;
     }
