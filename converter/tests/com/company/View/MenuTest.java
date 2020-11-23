@@ -20,7 +20,6 @@ public class MenuTest {
     @Before
     public void setUp() throws Exception {
         sut = new Menu();
-        inputMock = mock(Input.class);
     }
 
     @After
@@ -45,6 +44,15 @@ public class MenuTest {
         System.setIn(in);
 
         assertEquals(input, sut.getInput());
+    }
+
+    @Test
+    public void getMenuChoice_shouldReturnInputMeter() {
+
+        Input.MenuChoices actual = sut.getMenuChoice("m");
+        Input.MenuChoices expected = Input.MenuChoices.Meter;
+        
+        assertEquals(expected, actual);
     }
 
 }
