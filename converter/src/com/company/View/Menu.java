@@ -20,6 +20,10 @@ public class Menu {
         return null;
     }
 
+    /**
+     * @param val String
+     * @return The value converted to double.
+     */
     public double getValue(String val) {
         if (val == "A") {
             throw new IllegalArgumentException();
