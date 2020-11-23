@@ -92,4 +92,9 @@ public class MenuTest {
     public void getValue_shouldThrowIllegalArgumentExceptionIfValIsA() {
         sut.getValue("A");
     }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void getValue_shouldThrowIllegalArgumentExceptionIfValIsEmpty() {
+        sut.getValue("");
+    }
 }
