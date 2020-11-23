@@ -107,4 +107,13 @@ public class MenuTest {
         assertEquals(expected, actual, 0.01);
     }
 
+    @Test
+    public void getValue_shouldConvertStringNegativeOneToDouble() {
+
+        double actual = sut.getValue("-1");
+        double expected = -1.0;
+
+        assertEquals(expected, actual, 0.01);
+    }
+
 }
