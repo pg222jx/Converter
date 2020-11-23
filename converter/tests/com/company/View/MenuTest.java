@@ -64,4 +64,13 @@ public class MenuTest {
         assertEquals(expected, actual);
     }
 
+    @Test
+    public void getMenuChoice_shouldReturnInputInches() {
+
+        Input actual = sut.getMenuChoice("i");
+        Input expected = Input.Inches;
+
+        assertEquals(expected, actual);
+    }
+
 }
