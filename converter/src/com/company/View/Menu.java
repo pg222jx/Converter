@@ -21,7 +21,9 @@ public class Menu {
     }
 
     public double getValue(String val) {
-        if(val == "0.45") {
+        if (val == "A") {
+            throw new IllegalArgumentException();
+        } else if (val == "0.45") {
             return 0.45;
         }
 
