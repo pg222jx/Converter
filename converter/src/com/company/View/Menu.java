@@ -12,6 +12,8 @@ public class Menu {
             return Input.Meter;
         } else if (input == "c") {
             return Input.Centimeter;
+        } else if (input == "i") {
+            return Input.Inches;
         }
         return null;
     }
