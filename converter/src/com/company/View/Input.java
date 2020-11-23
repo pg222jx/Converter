@@ -1,7 +1,6 @@
 package com.company.View;
 
-public class Input {
-    enum MenuChoices {
+    enum Input {
         Meter
     }
-}
+

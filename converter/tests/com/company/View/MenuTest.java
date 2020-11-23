@@ -49,8 +49,8 @@ public class MenuTest {
     @Test
     public void getMenuChoice_shouldReturnInputMeter() {
 
-        Input.MenuChoices actual = sut.getMenuChoice("m");
-        Input.MenuChoices expected = Input.MenuChoices.Meter;
+        Input actual = sut.getMenuChoice("m");
+        Input expected = Input.Meter;
         
         assertEquals(expected, actual);
     }
