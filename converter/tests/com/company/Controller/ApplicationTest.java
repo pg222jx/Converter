@@ -72,4 +72,12 @@ public class ApplicationTest {
         verify(menuMock, times(3)).getInput();
     }
 
+    @Test
+    public void start_shouldCallGetValueOnce() {
+        when(menuMock.getMenuChoice(anyString())).thenReturn(Input.Meter, Input.Inches);
+        when(mConverterMock.convertFromInches(anyDouble())).thenReturn(1.0);
+        sut.start();
+        verify(menuMock, times(1)).getValue(anyString());
+    }
+
 }
