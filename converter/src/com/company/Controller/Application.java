@@ -18,7 +18,12 @@ public class Application {
         if (convertTo == Input.Meter) {
             input = menu.getInput();
             Input convertFrom = menu.getMenuChoice(input);
+
+            if (convertFrom == Input.Inches) {
+                return mConverter.convertFromInches(menu.getValue(menu.getInput()));
+            }
         }
+
         return 0;
     }
 
