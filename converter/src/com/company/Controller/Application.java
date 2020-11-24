@@ -21,7 +21,7 @@ public class Application {
 
             if (convertFrom == Input.Inches) {
                 input = menu.getInput();
-                Double inchValue = menu.getValue("1");
+                Double inchValue = menu.getValue(input);
                 return mConverter.convertFromInches(inchValue);
             }
         }
