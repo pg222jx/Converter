@@ -64,4 +64,12 @@ public class ApplicationTest {
         verify(mConverterMock).convertFromInches(anyDouble());
     }
 
+    @Test
+    public void start_shouldCallGetInputThreeTimes() {
+        when(menuMock.getMenuChoice(anyString())).thenReturn(Input.Meter, Input.Inches);
+        when(mConverterMock.convertFromInches(anyDouble())).thenReturn(1.0);
+        sut.start();
+        verify(menuMock, times(3)).getInput();
+    }
+
 }
