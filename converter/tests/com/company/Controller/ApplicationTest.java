@@ -33,4 +33,10 @@ public class ApplicationTest {
         sut.start();
         verify(menuMock).getInput();
     }
+
+    @Test
+    public void start_shouldCall_getMenuChoice() {
+        sut.start();
+        verify(menuMock).getMenuChoice(anyString());
+    }
 }

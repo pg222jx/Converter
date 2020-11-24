@@ -9,7 +9,8 @@ public class Application {
     private MConverter mConverter;
 
     public double start() {
-        String convertTo = menu.getInput();
+        String input = menu.getInput();
+
 
         return 0;
     }
