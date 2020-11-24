@@ -9,7 +9,7 @@ public class Application {
     private MConverter mConverter;
 
     public double start() {
-        Input convertTo = menu.getMenuChoice(menu.getInput());
+        String convertTo = menu.getInput();
 
         return 0;
     }

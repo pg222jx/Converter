@@ -8,7 +8,6 @@ import org.junit.Before;
 import org.junit.Test;
 
 import static org.mockito.Mockito.*;
-import org.junit.jupiter.api.BeforeEach;
 
 public class ApplicationTest {
     private Menu menuMock;
