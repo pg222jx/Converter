@@ -11,7 +11,9 @@ public class Application {
     public double start() {
         String input = menu.getInput();
         Input convertTo = menu.getMenuChoice(input);
-
+        if (convertTo == Input.Meter) {
+            input = menu.getInput();
+        }
         return 0;
     }
 
