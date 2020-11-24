@@ -8,6 +8,8 @@ import org.junit.Before;
 import org.junit.Test;
 
 import static org.mockito.Mockito.*;
+import org.mockito.MockitoAnnotations;
+import org.mockito.stubbing.OngoingStubbing;
 
 public class ApplicationTest {
     private Menu menuMock;
@@ -18,6 +20,7 @@ public class ApplicationTest {
 
     @Before
     public void setUp() {
+        MockitoAnnotations.initMocks(this);
         menuMock = mock(Menu.class);
         mConverterMock = mock(MConverter.class);
         sut = new Application(menuMock, mConverterMock);
@@ -38,5 +41,12 @@ public class ApplicationTest {
     public void start_shouldCallGetMenuChoice() {
         sut.start();
         verify(menuMock).getMenuChoice(anyString());
+    }
+
+    @Test
+    public void start_shouldReturn() {
+        when(menuMock.getMenuChoice(anyString())).thenReturn(Input.Meter);
+        sut.start();
+        verify(menuMock, times(2)).getInput();
     }
 }
