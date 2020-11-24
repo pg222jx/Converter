@@ -8,6 +8,9 @@ public class Application {
     private Menu menu;
     private MConverter mConverter;
 
+    /**
+     * @return the converted value.
+     */
     public double start() {
         String input = menu.getInput();
         Input convertTo = menu.getMenuChoice(input);
