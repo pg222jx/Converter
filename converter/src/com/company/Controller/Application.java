@@ -20,7 +20,7 @@ public class Application {
             Input convertFrom = menu.getMenuChoice(input);
 
             if (convertFrom == Input.Inches) {
-                return mConverter.convertFromInches(menu.getValue(menu.getInput()));
+                return mConverter.convertFromInches(1.0);
             }
         }
 

@@ -56,6 +56,7 @@ public class ApplicationTest {
         sut.start();
         verify(menuMock, times(2)).getMenuChoice(anyString());
     }
+    
     @Test
     public void start_shouldCallConvertFromInches() {
         when(menuMock.getMenuChoice(anyString())).thenReturn(Input.Meter, Input.Inches);
