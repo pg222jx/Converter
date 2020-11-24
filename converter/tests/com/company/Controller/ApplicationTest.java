@@ -29,13 +29,13 @@ public class ApplicationTest {
     }
 
     @Test
-    public void start_shouldCall_getInput() {
+    public void start_shouldCallGetInput() {
         sut.start();
         verify(menuMock).getInput();
     }
 
     @Test
-    public void start_shouldCall_getMenuChoice() {
+    public void start_shouldCallGetMenuChoice() {
         sut.start();
         verify(menuMock).getMenuChoice(anyString());
     }
