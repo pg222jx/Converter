@@ -44,7 +44,7 @@ public class ApplicationTest {
     }
 
     @Test
-    public void start_shouldReturn() {
+    public void start_shouldCallGetInputTwoTimes() {
         when(menuMock.getMenuChoice(anyString())).thenReturn(Input.Meter);
         sut.start();
         verify(menuMock, times(2)).getInput();
