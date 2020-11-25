@@ -21,7 +21,7 @@ public class Console {
     /**
      * Writes to output stream
      */
-    public void printToConsole(String string) { System.out.print("Welcome"); }
+    public void printToConsole(String string) { System.out.print(string); }
 
     /**
      * @param input String
