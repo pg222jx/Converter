@@ -10,6 +10,9 @@ public class Console {
         System.out.print("Welcome");
     }
 
+
+    public void printToConsole(String string) { System.out.print(""); }
+
     /**
      * @param input String
      * @return Input - The chosen menu option.

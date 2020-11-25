@@ -7,18 +7,50 @@ import org.junit.Test;
 import java.io.*;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertThat;
 
-public class MenuTest {
+import static org.junit.matchers.JUnitMatchers.*;
+import org.hamcrest.core.StringContains;
+import org.junit.Assert;
+
+
+public class ConsoleTest {
     private Console sut;
+    private static final String WELCOME = "Welcome";
+
+
+    private PrintStream sysOut;
+    private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
 
     @Before
     public void setUp() throws Exception {
         sut = new Console();
     }
 
+    @Before
+    public void setUpStreams() {
+        sysOut = System.out;
+        System.setOut(new PrintStream(outContent));
+    }
+
     @After
     public void tearDown() throws Exception {
     }
+
+
+    @After
+    public void revertStreams() {
+        System.setOut(sysOut);
+    }
+
+
+    @Test
+    public void printToConsole_shouldPrintToConsole() {
+        sut.printToConsole("Welcome");
+
+        assertEquals("Welcome",  outContent.toString());
+    }
+
 
     @Test
     public void getInput_shouldReturnM() {
