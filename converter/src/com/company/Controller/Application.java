@@ -20,6 +20,7 @@ public class Application {
 
         if (convertTo == Input.Meter) {
 
+
             input = console.getInput();
             Input convertFrom = console.getMenuChoice(input);
 

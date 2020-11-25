@@ -33,6 +33,13 @@ public class ApplicationTest {
     }
 
     @Test
+    public void start_shouldCallGetConvertFromMessage() {
+        when(consoleMock.getMenuChoice(anyString())).thenReturn(Input.Meter);
+        sut.start();
+        verify(consoleMock).getConvertFromMessage();
+    }
+
+    @Test
     public void start_shouldCallGetInput() {
         sut.start();
         verify(consoleMock).getInput();
