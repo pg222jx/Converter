@@ -10,7 +10,9 @@ public class Console {
         System.out.print("Welcome");
     }
 
-
+    /**
+     * Writes to output stream
+     */
     public void printToConsole(String string) { System.out.print("Welcome"); }
 
     /**
@@ -18,13 +20,13 @@ public class Console {
      * @return Input - The chosen menu option.
      */
     public Input getMenuChoice(String input) {
-        if (input == "m") {
+        if (input.equals("m")) {
             return Input.Meter;
-        } else if (input == "c") {
+        } else if (input.equals("c")) {
             return Input.Centimeter;
-        } else if (input == "i") {
+        } else if (input.equals("i")) {
             return Input.Inches;
-        } else if (input == "f") {
+        } else if (input.equals("f")) {
             return Input.Foot;
         }
         return null;

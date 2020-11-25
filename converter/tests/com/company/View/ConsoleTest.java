@@ -7,12 +7,6 @@ import org.junit.Test;
 import java.io.*;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertThat;
-
-import static org.junit.matchers.JUnitMatchers.*;
-import org.hamcrest.core.StringContains;
-import org.junit.Assert;
-
 
 public class ConsoleTest {
     private Console sut;
@@ -37,20 +31,17 @@ public class ConsoleTest {
     public void tearDown() throws Exception {
     }
 
-
     @After
     public void revertStreams() {
         System.setOut(sysOut);
     }
 
-
     @Test
     public void printToConsole_shouldPrintToConsole() {
-        sut.printToConsole("Welcome");
+        sut.printToConsole(WELCOME);
 
-        assertEquals("Welcome",  outContent.toString());
+        assertEquals(WELCOME,  outContent.toString());
     }
-
 
     @Test
     public void getInput_shouldReturnM() {
