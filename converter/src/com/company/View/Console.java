@@ -60,7 +60,8 @@ public class Console {
      * @return The value converted to double.
      */
     public double getValue(String val) {
-        if (val.matches("[a-zA-Z]+") || val.length() == 0) {
+        String alphabeticChars = "[a-zA-Z]+";
+        if (val.matches(alphabeticChars) || val.length() == 0) {
             throw new IllegalArgumentException();
         }
         return  Double.parseDouble(val);
