@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Console {
     /**
-     * Writes to output stream
+     * @return message asking for user input
      */
     public String getWelcomeMessage() {
         String message = "Welcome to converter!\nWhich unit do you want to convert to? \n";
@@ -19,7 +19,7 @@ public class Console {
     }
 
     /**
-     * Writes to output stream
+     * @return message asking for user input
      */
     public String getConvertFromMessage() {
         String message = "What unit do you want to convert from?\n";
@@ -34,6 +34,7 @@ public class Console {
     }
 
     /**
+     * @param string String
      * Writes to output stream
      */
     public void printToConsole(String string) { System.out.print(string); }
@@ -68,7 +69,7 @@ public class Console {
     }
 
     /**
-     * @return String- The users input from console
+     * @return String - The users input from console
      */
     public String getInput() {
         Scanner sc = new Scanner(System.in);
