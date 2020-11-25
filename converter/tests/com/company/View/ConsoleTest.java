@@ -136,4 +136,18 @@ public class ConsoleTest {
         assertEquals(expected, actual, 0.01);
     }
 
+    @Test
+    public void getWelcomeMessage_shouldReturnCorrectMessage() {
+
+        String actual = sut.getWelcomeMessage();
+        String expected = "Welcome to converter!\n" +
+                "Which unit do you want to convert to? \n" +
+                "1: Meter\n" +
+                "2: Centimeter\n" +
+                "3: Inches\n" +
+                "4: Foot\n";
+
+        assertEquals(expected, actual);
+    }
+
 }
