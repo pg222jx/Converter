@@ -1,7 +1,14 @@
 package com.company.View;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Menu {
+    /**
+     * Writes to output stream
+     */
+    public void displayWelcomeMessage() {
+        System.out.print("Welcome");
+    }
 
     /**
      * @param input String
