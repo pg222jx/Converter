@@ -12,6 +12,7 @@ public class Application {
      * @return the converted value.
      */
     public double start() {
+        menu.displayWelcomeMessage();
 
         String input = menu.getInput();
         Input convertTo = menu.getMenuChoice(input);
