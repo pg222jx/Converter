@@ -11,7 +11,7 @@ public class Console {
     }
 
 
-    public void printToConsole(String string) { System.out.print(""); }
+    public void printToConsole(String string) { System.out.print("Welcome"); }
 
     /**
      * @param input String
