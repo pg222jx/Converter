@@ -17,7 +17,6 @@ public class Application {
 
         String input = console.getInput();
         Input convertTo = console.getMenuChoice(input);
-        System.out.print(convertTo);
 
         if (convertTo == Input.Meter) {
             input = console.getInput();
@@ -31,7 +30,6 @@ public class Application {
         }
 
         return 0;
-
     }
 
     public Application (Console console, MConverter mConverter) {
