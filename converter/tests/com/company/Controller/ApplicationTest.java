@@ -81,4 +81,10 @@ public class ApplicationTest {
         verify(consoleMock, times(1)).getValue(anyString());
     }
 
+    @Test
+    public void start_shouldCallPrintToConsole() {
+        sut.start();
+        verify(consoleMock).printToConsole(anyString());
+    }
+
 }
