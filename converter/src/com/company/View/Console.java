@@ -22,7 +22,15 @@ public class Console {
      * Writes to output stream
      */
     public String getConvertFromMessage() {
-        return "Convert from";
+        String message = "What unit do you want to convert from?\n";
+
+        int inc = 0;
+        for (Input unit : Input.values()) {
+            inc = inc+1;
+            message += Integer.toString(inc) + ": " +  unit + "\n";
+        }
+
+        return message;
     }
 
     /**
