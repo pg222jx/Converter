@@ -12,7 +12,8 @@ public class Application {
      * @return the converted value.
      */
     public double start() {
-        console.getWelcomeMessage();
+        String message = console.getWelcomeMessage();
+        console.printToConsole(message);
 
         String input = console.getInput();
         Input convertTo = console.getMenuChoice(input);
