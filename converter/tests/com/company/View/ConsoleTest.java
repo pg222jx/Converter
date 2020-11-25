@@ -66,7 +66,7 @@ public class ConsoleTest {
     @Test
     public void getMenuChoice_shouldReturnInputMeter() {
 
-        Input actual = sut.getMenuChoice("m");
+        Input actual = sut.getMenuChoice("1");
         Input expected = Input.Meter;
         
         assertEquals(expected, actual);
@@ -75,7 +75,7 @@ public class ConsoleTest {
     @Test
     public void getMenuChoice_shouldReturnInputCentimeter() {
 
-        Input actual = sut.getMenuChoice("c");
+        Input actual = sut.getMenuChoice("2");
         Input expected = Input.Centimeter;
 
         assertEquals(expected, actual);
@@ -84,7 +84,7 @@ public class ConsoleTest {
     @Test
     public void getMenuChoice_shouldReturnInputInches() {
 
-        Input actual = sut.getMenuChoice("i");
+        Input actual = sut.getMenuChoice("3");
         Input expected = Input.Inches;
 
         assertEquals(expected, actual);
@@ -93,7 +93,7 @@ public class ConsoleTest {
     @Test
     public void getMenuChoice_shouldReturnInputFoot() {
 
-        Input actual = sut.getMenuChoice("f");
+        Input actual = sut.getMenuChoice("4");
         Input expected = Input.Foot;
 
         assertEquals(expected, actual);
