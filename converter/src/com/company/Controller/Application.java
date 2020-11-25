@@ -19,6 +19,7 @@ public class Application {
         Input convertTo = console.getMenuChoice(input);
 
         if (convertTo == Input.Meter) {
+
             input = console.getInput();
             Input convertFrom = console.getMenuChoice(input);
 

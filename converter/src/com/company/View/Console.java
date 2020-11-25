@@ -7,15 +7,15 @@ public class Console {
      * Writes to output stream
      */
     public String getWelcomeMessage() {
-        String welcomeMessage = "Welcome to converter!\nWhich unit do you want to convert to? \n";
+        String message = "Welcome to converter!\nWhich unit do you want to convert to? \n";
 
         int inc = 0;
         for (Input unit : Input.values()) {
             inc = inc+1;
-            welcomeMessage += Integer.toString(inc) + ": " +  unit + "\n";
+            message += Integer.toString(inc) + ": " +  unit + "\n";
         }
 
-        return welcomeMessage;
+        return message;
     }
 
     /**
@@ -43,13 +43,13 @@ public class Console {
      * @return Input - The chosen menu option.
      */
     public Input getMenuChoice(String input) {
-        if (input.equals("m")) {
+        if (input.equals("1")) {
             return Input.Meter;
-        } else if (input.equals("c")) {
+        } else if (input.equals("2")) {
             return Input.Centimeter;
-        } else if (input.equals("i")) {
+        } else if (input.equals("3")) {
             return Input.Inches;
-        } else if (input.equals("f")) {
+        } else if (input.equals("4")) {
             return Input.Foot;
         }
         return null;
