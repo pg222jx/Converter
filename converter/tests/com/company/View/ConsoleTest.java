@@ -150,4 +150,17 @@ public class ConsoleTest {
         assertEquals(expected, actual);
     }
 
+    @Test
+    public void getConvertFromMessage_shouldReturnCorrectMessage() {
+
+        String actual = sut.getConvertFromMessage();
+        String expected = "What unit do you want to convert from?\n" +
+                "1: Meter\n" +
+                "2: Centimeter\n" +
+                "3: Inches\n" +
+                "4: Foot\n";
+
+        assertEquals(expected, actual);
+    }
+
 }

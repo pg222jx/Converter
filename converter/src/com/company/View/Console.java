@@ -21,6 +21,13 @@ public class Console {
     /**
      * Writes to output stream
      */
+    public String getConvertFromMessage() {
+        return "Convert from";
+    }
+
+    /**
+     * Writes to output stream
+     */
     public void printToConsole(String string) { System.out.print(string); }
 
     /**
