@@ -29,7 +29,7 @@ public class ApplicationTest {
     @Test
     public void start_shouldCallDisplayWelcomeMessage() {
         sut.start();
-        verify(consoleMock).displayWelcomeMessage();
+        verify(consoleMock).getWelcomeMessage();
     }
 
     @Test

@@ -6,8 +6,16 @@ public class Console {
     /**
      * Writes to output stream
      */
-    public void displayWelcomeMessage() {
-        System.out.print("Welcome");
+    public String getWelcomeMessage() {
+        String welcomeMessage = "Welcome to converter!\nWhich unit do you want to convert to? \n";
+
+        int inc = 0;
+        for (Input unit : Input.values()) {
+            inc = inc+1;
+            welcomeMessage += Integer.toString(inc) + ": " +  unit + "\n";
+        }
+
+        return welcomeMessage;
     }
 
     /**
