@@ -1,30 +1,30 @@
 package com.company.Controller;
 
-import com.company.View.Menu;
+import com.company.View.Console;
 import com.company.View.Input;
 import com.company.Model.MConverter;
 
 public class Application {
-    private Menu menu;
+    private Console console;
     private MConverter mConverter;
 
     /**
      * @return the converted value.
      */
     public double start() {
-        menu.displayWelcomeMessage();
+        console.displayWelcomeMessage();
 
-        String input = menu.getInput();
-        Input convertTo = menu.getMenuChoice(input);
+        String input = console.getInput();
+        Input convertTo = console.getMenuChoice(input);
         System.out.print(convertTo);
 
         if (convertTo == Input.Meter) {
-            input = menu.getInput();
-            Input convertFrom = menu.getMenuChoice(input);
+            input = console.getInput();
+            Input convertFrom = console.getMenuChoice(input);
 
             if (convertFrom == Input.Inches) {
-                input = menu.getInput();
-                Double inchValue = menu.getValue(input);
+                input = console.getInput();
+                Double inchValue = console.getValue(input);
                 return mConverter.convertFromInches(inchValue);
             }
         }
@@ -33,8 +33,8 @@ public class Application {
 
     }
 
-    public Application (Menu menu, MConverter mConverter) {
-        this.menu = menu;
+    public Application (Console console, MConverter mConverter) {
+        this.console = console;
         this.mConverter = mConverter;
     }
 }

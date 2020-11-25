@@ -4,19 +4,16 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import org.mockito.Mock;
-import static org.mockito.Mockito.*;
-
 import java.io.*;
 
 import static org.junit.Assert.assertEquals;
 
 public class MenuTest {
-    private Menu sut;
+    private Console sut;
 
     @Before
     public void setUp() throws Exception {
-        sut = new Menu();
+        sut = new Console();
     }
 
     @After

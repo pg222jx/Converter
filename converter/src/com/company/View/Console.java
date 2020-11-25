@@ -2,7 +2,7 @@ package com.company.View;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class Menu {
+public class Console {
     /**
      * Writes to output stream
      */
