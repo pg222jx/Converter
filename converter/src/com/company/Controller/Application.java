@@ -20,14 +20,15 @@ public class Application {
         Input convertTo = console.getMenuChoice(input);
 
         if (convertTo == Input.Meter) {
-            String convertMessage = console.getConvertFromMessage();
-            console.printToConsole(convertMessage);
+            message = console.getConvertFromMessage();
+            console.printToConsole(message);
+
             input = console.getInput();
             Input convertFrom = console.getMenuChoice(input);
 
             if (convertFrom == Input.Inches) {
-                String digitMessage = console.getDoubleToConvertMessage();
-                console.printToConsole(digitMessage);
+                message = console.getDoubleToConvertMessage();
+                console.printToConsole(message);
 
                 input = console.getInput();
                 Double inchValue = console.getValue(input);
