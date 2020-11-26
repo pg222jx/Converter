@@ -25,14 +25,14 @@ public class SubApplicationTest {
     }
 
     @Test
-    public void doGetView_shouldCallGetWhatViewMessage() {
-        sut.doGetView();
+    public void getView_shouldCallGetWhatViewMessage() {
+        sut.getView();
         verify(startMenuMock).getWhatViewMessage();
     }
 
     @Test
-    public void doGetView_shouldCallPrintToConsole() {
-        sut.doGetView();
+    public void getView_shouldCallPrintToConsole() {
+        sut.getView();
         verify(startMenuMock).printToConsole(anyString());
     }
 }

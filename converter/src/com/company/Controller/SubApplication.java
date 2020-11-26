@@ -9,7 +9,7 @@ public class SubApplication {
     /**
      * @return - the by the user chosen view
      */
-    public AView doGetView() {
+    public AView getView() {
         String message = startMenu.getWhatViewMessage();
         startMenu.printToConsole(message);
 
