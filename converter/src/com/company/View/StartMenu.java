@@ -9,6 +9,6 @@ public class StartMenu {
     }
 
     public void printToConsole(String message) {
-        System.out.print("");
+        System.out.print(message);
     }
 }
