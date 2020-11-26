@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Console {
     /**
-     * @return message asking for user input
+     * @return - The message asking for unit to convert to
      */
     public String getWelcomeMessage() {
         String message = "Welcome to converter!\nWhich unit do you want to convert to? \n";
@@ -19,7 +19,7 @@ public class Console {
     }
 
     /**
-     * @return message asking for user input
+     * @return - The message asking for unit to convert from
      */
     public String getConvertFromMessage() {
         String message = "What unit do you want to convert from?\n";
