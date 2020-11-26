@@ -20,6 +20,6 @@ public class StartMenu {
 
     public String getInput() {
         Scanner sc = new Scanner(System.in);
-        return "";
+        return sc.nextLine();
     }
 }
