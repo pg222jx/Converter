@@ -12,7 +12,7 @@ public class Application {
     /**
      * @return the converted value.
      */
-    public double start() {
+    public void start() {
         String message = console.getWelcomeMessage();
         console.printToConsole(message);
 
@@ -36,10 +36,8 @@ public class Application {
                 Converter converter =  new ConverterFactory().getConverter(convertTo, inchValue);
                 message = console.getFinalOutputMessage(converter.convertFromInches());
                 console.printToConsole(message);
-                return converter.convertFromInches();
             }
         }
-        return 0;
     }
 
     public Application (Console console) {
