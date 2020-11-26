@@ -22,4 +22,10 @@ public class ViewFactoryTest {
         assertTrue(AV instanceof Console);
     }
 
+    @Test(expected = IllegalArgumentException.class)
+    public void getConsoleView_shouldThrowIllegalArgumentExceptionIfNotInput1() {
+        AView AV = ViewFactory.getConsoleView("2");
+        assertTrue(AV instanceof Console);
+    }
+
 }
