@@ -45,7 +45,7 @@ public class Console {
      * @return - The message with the final convertion
      */
     public String getDoubleToConvertMessage() {
-        String message = "";
+        String message = "Please enter the digit you want to convert with decimal points: \n";
 
         return message;
     }
