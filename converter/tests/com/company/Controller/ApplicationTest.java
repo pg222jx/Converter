@@ -1,6 +1,8 @@
 package com.company.Controller;
+import com.company.Model.ConverterFactory;
 import com.company.View.Input;
 import com.company.View.Console;
+import com.company.Model.Converter;
 import com.company.Model.MConverter;
 
 import org.junit.After;
@@ -11,15 +13,18 @@ import static org.mockito.Mockito.*;
 
 public class ApplicationTest {
     private Console consoleMock;
+    private Converter converterMock;
     private MConverter mConverterMock;
+    private ConverterFactory factoryMock;
     private Application sut;
 
 
     @Before
     public void setUp() {
         consoleMock = mock(Console.class);
-        mConverterMock = mock(MConverter.class);
-        sut = new Application(consoleMock, mConverterMock);
+        converterMock = mock(Converter.class);
+        factoryMock = mock(ConverterFactory.class);
+        sut = new Application(consoleMock);
     }
 
     @After
@@ -64,18 +69,12 @@ public class ApplicationTest {
         sut.start();
         verify(consoleMock, times(2)).getMenuChoice(anyString());
     }
-    
-    @Test
-    public void start_shouldCallConvertFromInches() {
-        when(consoleMock.getMenuChoice(anyString())).thenReturn(Input.Meter, Input.Inches);
-        sut.start();
-        verify(mConverterMock).convertFromInches(anyDouble());
-    }
+
 
     @Test
     public void start_shouldCallGetInputThreeTimes() {
         when(consoleMock.getMenuChoice(anyString())).thenReturn(Input.Meter, Input.Inches);
-        when(mConverterMock.convertFromInches(anyDouble())).thenReturn(1.0);
+        when(converterMock.convertFromInches()).thenReturn(1.0);
         sut.start();
         verify(consoleMock, times(3)).getInput();
     }
@@ -83,7 +82,7 @@ public class ApplicationTest {
     @Test
     public void start_shouldCallGetValueOnce() {
         when(consoleMock.getMenuChoice(anyString())).thenReturn(Input.Meter, Input.Inches);
-        when(mConverterMock.convertFromInches(anyDouble())).thenReturn(1.0);
+        when(converterMock.convertFromInches()).thenReturn(1.0);
         sut.start();
         verify(consoleMock, times(1)).getValue(anyString());
     }
