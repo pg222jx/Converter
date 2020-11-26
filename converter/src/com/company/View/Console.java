@@ -42,6 +42,15 @@ public class Console {
     }
 
     /**
+     * @return - The message with the final convertion
+     */
+    public String getDoubleToConvertMessage() {
+        String message = "";
+
+        return message;
+    }
+
+    /**
      * @param string String
      * Writes to output stream
      */

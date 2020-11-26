@@ -187,4 +187,13 @@ public class ConsoleTest {
 
         assertEquals(expected, actual);
     }
+
+    @Test
+    public void getDoubleToConvertMessage_shouldReturnCorrectMessage() {
+
+        String actual = sut.getDoubleToConvertMessage();
+        String expected = "Please enter the digit you want to convert with decimal points: \n";
+
+        assertEquals(expected, actual);
+    }
 }
