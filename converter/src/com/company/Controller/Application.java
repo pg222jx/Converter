@@ -35,6 +35,7 @@ public class Application {
 
                 Converter converter =  new ConverterFactory().getConverter(convertTo, inchValue);
                 message = console.getFinalOutputMessage(converter.convertFromInches());
+                console.printToConsole(message);
                 return converter.convertFromInches();
             }
         }

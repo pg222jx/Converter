@@ -114,4 +114,13 @@ public class ApplicationTest {
         sut.start();
         verify(consoleMock).getFinalOutputMessage(anyDouble());
     }
+
+    @Test
+    public void start_shouldCallPrintToConsoleFourTimes() {
+        when(consoleMock.getMenuChoice(anyString())).thenReturn(Input.Meter, Input.Inches);
+        when(converterMock.convertFromInches()).thenReturn(1.0);
+        when(consoleMock.getFinalOutputMessage(anyDouble())).thenReturn("Hello");
+        sut.start();
+        verify(consoleMock, times(4)).printToConsole(anyString());
+    }
 }
