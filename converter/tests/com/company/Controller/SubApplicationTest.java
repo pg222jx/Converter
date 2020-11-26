@@ -25,8 +25,9 @@ public class SubApplicationTest {
     }
 
     @Test
-    public void start_shouldCallDisplayWelcomeMessage() {
+    public void doGetView_shouldCallGetWhatViewMessage() {
         sut.doGetView();
         verify(startMenuMock).getWhatViewMessage();
     }
+
 }
