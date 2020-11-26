@@ -33,7 +33,7 @@ public class Application {
                 input = console.getInput();
                 Double inchValue = console.getValue(input);
 
-                Converter converter =  new ConverterFactory().getConverter(convertTo, inchValue);
+                Converter converter = ConverterFactory.getConverter(convertTo, inchValue);
                 message = console.getFinalOutputMessage(converter.convertFromInches());
                 console.printToConsole(message);
             }
