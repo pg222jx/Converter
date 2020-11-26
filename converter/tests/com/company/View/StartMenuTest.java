@@ -3,18 +3,36 @@ package com.company.View;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
+
 import static org.junit.Assert.assertEquals;
 
 public class StartMenuTest {
     private StartMenu sut;
+
+    private PrintStream sysOut;
+    private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
 
     @Before
     public void setUp() throws Exception {
         sut = new StartMenu();
     }
 
+    @Before
+    public void setUpStreams() {
+        sysOut = System.out;
+        System.setOut(new PrintStream(outContent));
+    }
+
     @After
     public void tearDown() throws Exception {
+    }
+
+    @After
+    public void revertStreams() {
+        System.setOut(sysOut);
     }
 
     @Test
@@ -24,5 +42,12 @@ public class StartMenuTest {
         String expected = "1. English \n2. Svenska\n";
 
         assertEquals(expected, actual);
+    }
+
+    @Test
+    public void printToConsole_shouldPrintToConsole() {
+        sut.printToConsole("hello");
+
+        assertEquals("hello",  outContent.toString());
     }
 }
