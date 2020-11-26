@@ -20,6 +20,8 @@ public class Application {
         Input convertTo = console.getMenuChoice(input);
 
         if (convertTo == Input.Meter) {
+            String convertMessage = console.getConvertFromMessage();
+
             input = console.getInput();
             Input convertFrom = console.getMenuChoice(input);
 
