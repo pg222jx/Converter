@@ -36,7 +36,7 @@ public class Console {
      * @return - The message asking for unit to convert from
      */
     public String getFinalOutputMessage(double value) {
-        String message = "The final result is......:\n";
+        String message = "The final result is......:\n" + value;
 
         return message;
     }
