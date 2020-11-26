@@ -30,4 +30,9 @@ public class SubApplicationTest {
         verify(startMenuMock).getWhatViewMessage();
     }
 
+    @Test
+    public void doGetView_shouldCallPrintToConsole() {
+        sut.doGetView();
+        verify(startMenuMock).printToConsole(anyString());
+    }
 }
