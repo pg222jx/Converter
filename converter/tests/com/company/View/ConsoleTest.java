@@ -103,8 +103,8 @@ public class ConsoleTest {
     public void getMenuChoice_shouldThrowIllegalArgumentExceptionIfValIsChar() {
         sut.getMenuChoice("A");
     }
-    @Test(expected = IllegalArgumentException.class)
 
+    @Test(expected = IllegalArgumentException.class)
     public void getMenuChoice_shouldThrowIllegalArgumentExceptionIfValIsEmpty() {
         sut.getMenuChoice("");
     }

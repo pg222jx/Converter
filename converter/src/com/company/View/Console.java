@@ -29,7 +29,6 @@ public class Console {
             inc = inc+1;
             message += Integer.toString(inc) + ": " +  unit + "\n";
         }
-
         return message;
     }
 
@@ -64,6 +63,7 @@ public class Console {
      */
     public double getValue(String val) {
         String alphabeticChars = "[a-zA-Z]+";
+
         if (val.matches(alphabeticChars) || val.length() == 0) {
             throw new IllegalArgumentException();
         }
