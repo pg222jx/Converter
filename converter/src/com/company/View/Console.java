@@ -51,10 +51,9 @@ public class Console {
             return Input.Inches;
         } else if (input.equals("4")) {
             return Input.Foot;
-        } else if (input.equals("A") || input.equals("") || input.equals("5")) {
+        } else {
             throw new IllegalArgumentException();
         }
-        return null;
     }
 
     /**
