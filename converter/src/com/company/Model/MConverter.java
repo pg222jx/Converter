@@ -1,20 +1,25 @@
 package com.company.Model;
 
-public class MConverter {
+public class MConverter extends Converter {
+    private double value;
 
-    public double convertFromInches(double inches) {
+    public double convertFromInches() {
         double inchValue = 0.0254;
 
-        return inches * inchValue;
+        return value * inchValue;
     }
 
-    /**
-     * @param foot double
+    /**value
      * @return Value of the calculations of foot in meter
      */
-    public double convertFromFoot(double foot) {
+    public double convertFromFoot() {
         double footValue = 0.3048;
 
-        return foot * footValue;
+        return value * footValue;
     }
+
+    public MConverter(double value) {
+        this.value = value;
+    }
+
 }
