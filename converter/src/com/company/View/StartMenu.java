@@ -1,4 +1,5 @@
 package com.company.View;
+import java.util.Scanner;
 
 
 public class StartMenu {
@@ -15,5 +16,10 @@ public class StartMenu {
      */
     public void printToConsole(String message) {
         System.out.print(message);
+    }
+
+    public String getInput() {
+        Scanner sc = new Scanner(System.in);
+        return "";
     }
 }

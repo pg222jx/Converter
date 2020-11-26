@@ -4,7 +4,9 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
+import java.io.InputStream;
 import java.io.PrintStream;
 
 import static org.junit.Assert.assertEquals;
@@ -50,4 +52,14 @@ public class StartMenuTest {
 
         assertEquals("hello",  outContent.toString());
     }
+    @Test
+    public void getInput_shouldReturn1() {
+
+        String input = "1";
+        InputStream in = new ByteArrayInputStream(input.getBytes());
+        System.setIn(in);
+
+        assertEquals(input, sut.getInput());
+    }
+
 }
