@@ -99,6 +99,11 @@ public class ConsoleTest {
         assertEquals(expected, actual);
     }
 
+    @Test(expected = IllegalArgumentException.class)
+    public void getMenuChoice_shouldThrowIllegalArgumentExceptionIfValIsChar() {
+        sut.getMenuChoice("A");
+    }
+
     @Test
     public void getValue_shouldConvertStringNumberToDouble() {
 
@@ -162,5 +167,4 @@ public class ConsoleTest {
 
         assertEquals(expected, actual);
     }
-
 }
