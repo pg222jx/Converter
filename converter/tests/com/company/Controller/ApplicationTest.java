@@ -98,7 +98,6 @@ public class ApplicationTest {
         verify(consoleMock).getConvertFromMessage();
     }
 
-
     @Test
     public void start_shouldCallPrintToConsoleTwoTimes() {
         when(consoleMock.getMenuChoice(anyString())).thenReturn(Input.Meter, Input.Inches);
@@ -106,5 +105,13 @@ public class ApplicationTest {
         when(consoleMock.getDoubleToConvertMessage()).thenReturn("Hello");
         sut.start();
         verify(consoleMock, times(3)).printToConsole(anyString());
+    }
+
+    @Test
+    public void start_getFinalOutputMessage() {
+        when(consoleMock.getMenuChoice(anyString())).thenReturn(Input.Meter, Input.Inches);
+        when(converterMock.convertFromInches()).thenReturn(1.0);
+        sut.start();
+        verify(consoleMock).getFinalOutputMessage(anyDouble());
     }
 }
