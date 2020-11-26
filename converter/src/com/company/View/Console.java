@@ -2,7 +2,7 @@ package com.company.View;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class Console {
+public class Console extends AView {
     /**
      * @return - The message asking for unit to convert to
      */
