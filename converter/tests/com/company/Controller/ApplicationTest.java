@@ -14,8 +14,6 @@ import static org.mockito.Mockito.*;
 public class ApplicationTest {
     private Console consoleMock;
     private Converter converterMock;
-    private MConverter mConverterMock;
-    private ConverterFactory factoryMock;
     private Application sut;
 
 
@@ -23,7 +21,6 @@ public class ApplicationTest {
     public void setUp() {
         consoleMock = mock(Console.class);
         converterMock = mock(Converter.class);
-        factoryMock = mock(ConverterFactory.class);
         sut = new Application(consoleMock);
     }
 
