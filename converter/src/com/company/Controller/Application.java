@@ -30,9 +30,9 @@ public class Application {
             if (convertFrom == Input.Inches) {
                 input = console.getInput();
                 Double inchValue = console.getValue(input);
-                // ConverterFactory c =  new ConverterFactory();
-                Converter cc =  new ConverterFactory().getConverter(convertTo, inchValue);
-                cc.convertFromInches();
+
+                Converter converter =  new ConverterFactory().getConverter(convertTo, inchValue);
+                return converter.convertFromInches();
             }
         }
         return 0;
