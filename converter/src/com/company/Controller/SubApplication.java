@@ -8,7 +8,7 @@ public class SubApplication {
 
     public AView doGetView() {
         String message = startMenu.getWhatViewMessage();
-
+        startMenu.printToConsole(message);
 
         return null;
     }
