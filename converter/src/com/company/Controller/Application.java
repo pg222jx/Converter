@@ -34,6 +34,7 @@ public class Application {
                 Double inchValue = console.getValue(input);
 
                 Converter converter =  new ConverterFactory().getConverter(convertTo, inchValue);
+                message = console.getFinalOutputMessage(converter.convertFromInches());
                 return converter.convertFromInches();
             }
         }
