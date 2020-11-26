@@ -109,6 +109,11 @@ public class ConsoleTest {
         sut.getMenuChoice("");
     }
 
+    @Test(expected = IllegalArgumentException.class)
+    public void getMenuChoice_shouldThrowIllegalArgumentExceptionIfValIsNotInEnum() {
+        sut.getMenuChoice("5");
+    }
+
     @Test
     public void getValue_shouldConvertStringNumberToDouble() {
 
