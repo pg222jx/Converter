@@ -90,4 +90,12 @@ public class ApplicationTest {
         verify(consoleMock).printToConsole(anyString());
     }
 
+    @Test
+    public void start_getConvertFromMessage() {
+        when(consoleMock.getMenuChoice(anyString())).thenReturn(Input.Meter, Input.Inches);
+        when(converterMock.convertFromInches()).thenReturn(1.0);
+        sut.start();
+        verify(consoleMock).getConvertFromMessage();
+    }
+
 }
