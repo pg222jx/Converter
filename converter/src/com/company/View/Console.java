@@ -1,5 +1,4 @@
 package com.company.View;
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class Console extends AView {
