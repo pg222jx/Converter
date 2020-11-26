@@ -18,6 +18,9 @@ public class StartMenu {
         System.out.print(message);
     }
 
+    /**
+     *  @return String - The users input from console
+     */
     public String getInput() {
         Scanner sc = new Scanner(System.in);
         return sc.nextLine();
