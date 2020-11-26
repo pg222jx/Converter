@@ -7,7 +7,7 @@ public class SubApplication {
     private StartMenu startMenu;
 
     public AView doGetView() {
-
+        String message = startMenu.getWhatViewMessage();
 
         return null;
     }
