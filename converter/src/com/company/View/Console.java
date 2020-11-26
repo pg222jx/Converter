@@ -33,6 +33,15 @@ public class Console {
     }
 
     /**
+     * @return - The message asking for unit to convert from
+     */
+    public String getFinalOutputMessage(double value) {
+        String message = "The final result is......:\n";
+
+        return message;
+    }
+
+    /**
      * @param string String
      * Writes to output stream
      */

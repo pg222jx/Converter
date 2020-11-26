@@ -177,4 +177,14 @@ public class ConsoleTest {
 
         assertEquals(expected, actual);
     }
+
+    @Test
+    public void getFinalOutputMessage_shouldReturnCorrectMessage() {
+
+        String actual = sut.getFinalOutputMessage(12.3456);
+        String expected = "The final result is......:\n" +
+                "12.3456";
+
+        assertEquals(expected, actual);
+    }
 }
