@@ -54,10 +54,10 @@ public class ApplicationTest {
     }
 
     @Test
-    public void start_shouldCallGetInputTwoTimes() {
+    public void start_shouldCallGetInputThreeTimes() {
         when(consoleMock.getMenuChoice(anyString())).thenReturn(Input.Meter);
         sut.start();
-        verify(consoleMock, times(2)).getInput();
+        verify(consoleMock, times(3)).getInput();
     }
 
     @Test
@@ -65,15 +65,6 @@ public class ApplicationTest {
         when(consoleMock.getMenuChoice(anyString())).thenReturn(Input.Meter);
         sut.start();
         verify(consoleMock, times(2)).getMenuChoice(anyString());
-    }
-
-
-    @Test
-    public void start_shouldCallGetInputThreeTimes() {
-        when(consoleMock.getMenuChoice(anyString())).thenReturn(Input.Meter, Input.Inches);
-        when(converterMock.convertFromInches()).thenReturn(1.0);
-        sut.start();
-        verify(consoleMock, times(3)).getInput();
     }
 
     @Test
