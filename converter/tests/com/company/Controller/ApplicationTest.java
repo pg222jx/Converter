@@ -114,4 +114,12 @@ public class ApplicationTest {
         sut.start();
         verify(consoleMock, times(4)).printToConsole(anyString());
     }
+
+    @Test
+    public void start_getFinalOutputMessageFoot() {
+        when(consoleMock.getMenuChoice(anyString())).thenReturn(Input.Meter, Input.Foot);
+        when(converterMock.convertFromFoot()).thenReturn(1.0);
+        sut.start();
+        verify(consoleMock).getFinalOutputMessage(anyDouble());
+    }
 }
