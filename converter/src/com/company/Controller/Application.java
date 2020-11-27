@@ -26,15 +26,21 @@ public class Application {
             input = console.getInput();
             Input convertFrom = console.getMenuChoice(input);
 
+            message = console.getDoubleToConvertMessage();
+            console.printToConsole(message);
+
+            input = console.getInput();
+            Double digitValue = console.getValue(input);
+
             if (convertFrom == Input.Inches) {
-                message = console.getDoubleToConvertMessage();
-                console.printToConsole(message);
-
-                input = console.getInput();
-                Double inchValue = console.getValue(input);
-
-                Converter converter = ConverterFactory.getConverter(convertTo, inchValue);
+                Converter converter = ConverterFactory.getConverter(convertTo, digitValue);
                 message = console.getFinalOutputMessage(converter.convertFromInches());
+                console.printToConsole(message);
+            }
+
+            if (convertFrom == Input.Foot) {
+                Converter converter = ConverterFactory.getConverter(convertTo, digitValue);
+                message = console.getFinalOutputMessage(converter.convertFromFoot());
                 console.printToConsole(message);
             }
         }
