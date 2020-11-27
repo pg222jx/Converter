@@ -1,7 +1,6 @@
 package com.company.View;
 import java.util.Scanner;
 
-
 public class StartMenu {
     /**
      * @return - The message with the menu languages.

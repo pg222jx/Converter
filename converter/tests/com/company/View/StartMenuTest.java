@@ -39,7 +39,6 @@ public class StartMenuTest {
 
     @Test
     public void getWhatViewMessage_shouldReturnCorrectMessage() {
-
         String actual = sut.getWhatViewMessage();
         String expected = "1. English \n2. Svenska\n";
 
@@ -54,7 +53,6 @@ public class StartMenuTest {
     }
     @Test
     public void getInput_shouldReturn1() {
-
         String input = "1";
         InputStream in = new ByteArrayInputStream(input.getBytes());
         System.setIn(in);
