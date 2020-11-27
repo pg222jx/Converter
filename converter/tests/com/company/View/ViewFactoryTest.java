@@ -28,5 +28,4 @@ public class ViewFactoryTest {
         AView AV = sut.getConsoleView("2");
         assertTrue(AV instanceof Console);
     }
-
 }

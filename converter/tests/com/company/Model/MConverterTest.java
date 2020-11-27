@@ -1,23 +1,11 @@
 package com.company.Model;
 
-import java.io.IOException;
-
 import org.junit.After;
-import org.junit.Before;
 import org.junit.Test;
-import static org.mockito.Mockito.*;
-
-
 import static org.junit.Assert.assertEquals;
 
 public class MConverterTest {
-
     private MConverter sut;
-
-    @Before
-    public void setUp() throws Exception {
-
-    }
 
     @After
     public void tearDown() throws Exception {

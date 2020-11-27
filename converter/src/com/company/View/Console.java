@@ -13,7 +13,6 @@ public class Console extends AView {
             inc = inc+1;
             message += Integer.toString(inc) + ": " +  unit + "\n";
         }
-
         return message;
     }
 
@@ -32,7 +31,8 @@ public class Console extends AView {
     }
 
     /**
-     * @return - The message with the final convertion
+     * @param value double - The converted value
+     * @return - The message with the final conversion
      */
     public String getFinalOutputMessage(double value) {
         String message = "The final result is......:\n" + value;
@@ -41,7 +41,7 @@ public class Console extends AView {
     }
 
     /**
-     * @return - The message with the final convertion
+     * @return - The message with the final conversion
      */
     public String getDoubleToConvertMessage() {
         String message = "Please enter the digit you want to convert with decimal points: \n";

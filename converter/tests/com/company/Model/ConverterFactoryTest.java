@@ -1,6 +1,5 @@
 package com.company.Model;
 
-import com.company.View.Console;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -10,12 +9,10 @@ import static org.mockito.Mockito.*;
 
 public class ConverterFactoryTest {
     private ConverterFactory sut;
-    private ConverterFactory spyObject;
 
     @Before
     public void setUp() throws Exception {
         sut = new ConverterFactory();
-        spyObject = spy(sut);
     }
 
     @After
@@ -27,7 +24,6 @@ public class ConverterFactoryTest {
         Converter c = ConverterFactory.getConverter(Input.Meter, 1.0);
         assertTrue(c instanceof MConverter);
     }
-
 
     @Test(expected = IllegalArgumentException.class)
     public void getConverter_shouldThrowIllegalArgumentExceptionIfInputFoot() {

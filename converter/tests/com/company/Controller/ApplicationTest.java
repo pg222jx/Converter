@@ -1,9 +1,7 @@
 package com.company.Controller;
-import com.company.Model.ConverterFactory;
 import com.company.View.Input;
 import com.company.View.Console;
 import com.company.Model.Converter;
-import com.company.Model.MConverter;
 
 import org.junit.After;
 import org.junit.Before;
@@ -15,7 +13,6 @@ public class ApplicationTest {
     private Console consoleMock;
     private Converter converterMock;
     private Application sut;
-
 
     @Before
     public void setUp() {
@@ -48,7 +45,7 @@ public class ApplicationTest {
     }
 
     @Test
-    public void start_shouldCallGetMenuChoice() {
+    public void start_shouldCallGetMenuChoiceOnce() {
         sut.start();
         verify(consoleMock).getMenuChoice(anyString());
     }
@@ -76,13 +73,13 @@ public class ApplicationTest {
     }
 
     @Test
-    public void start_shouldCallPrintToConsole() {
+    public void start_shouldCallPrintToConsoleOnce() {
         sut.start();
         verify(consoleMock).printToConsole(anyString());
     }
 
     @Test
-    public void start_getConvertFromMessage() {
+    public void start_getConvertFromMessageShouldBeCalledOnce() {
         when(consoleMock.getMenuChoice(anyString())).thenReturn(Input.Meter, Input.Inches);
         when(converterMock.convertFromInches()).thenReturn(1.0);
         sut.start();
@@ -90,7 +87,7 @@ public class ApplicationTest {
     }
 
     @Test
-    public void start_getFinalOutputMessage() {
+    public void start_getFinalOutputMessageShouldBeCalledOnceWhenInches() {
         when(consoleMock.getMenuChoice(anyString())).thenReturn(Input.Meter, Input.Inches);
         when(converterMock.convertFromInches()).thenReturn(1.0);
         sut.start();
@@ -104,13 +101,5 @@ public class ApplicationTest {
         when(consoleMock.getFinalOutputMessage(anyDouble())).thenReturn("Hello");
         sut.start();
         verify(consoleMock, times(4)).printToConsole(anyString());
-    }
-
-    @Test
-    public void start_getFinalOutputMessageFoot() {
-        when(consoleMock.getMenuChoice(anyString())).thenReturn(Input.Meter, Input.Foot);
-        when(converterMock.convertFromFoot()).thenReturn(1.0);
-        sut.start();
-        verify(consoleMock).getFinalOutputMessage(anyDouble());
     }
 }

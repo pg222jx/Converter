@@ -12,7 +12,6 @@ public class ConsoleTest {
     private Console sut;
     private static final String WELCOME = "Welcome";
 
-
     private PrintStream sysOut;
     private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
 
@@ -45,7 +44,6 @@ public class ConsoleTest {
 
     @Test
     public void getInput_shouldReturnM() {
-
         String input = "m";
         InputStream in = new ByteArrayInputStream(input.getBytes());
         System.setIn(in);
@@ -55,7 +53,6 @@ public class ConsoleTest {
 
     @Test
     public void getInput_shouldReturnCm() {
-
         String input = "cm";
         InputStream in = new ByteArrayInputStream(input.getBytes());
         System.setIn(in);
@@ -65,7 +62,6 @@ public class ConsoleTest {
 
     @Test
     public void getMenuChoice_shouldReturnInputMeter() {
-
         Input actual = sut.getMenuChoice("1");
         Input expected = Input.Meter;
         
@@ -74,7 +70,6 @@ public class ConsoleTest {
 
     @Test
     public void getMenuChoice_shouldReturnInputCentimeter() {
-
         Input actual = sut.getMenuChoice("2");
         Input expected = Input.Centimeter;
 
@@ -83,7 +78,6 @@ public class ConsoleTest {
 
     @Test
     public void getMenuChoice_shouldReturnInputInches() {
-
         Input actual = sut.getMenuChoice("3");
         Input expected = Input.Inches;
 
@@ -92,7 +86,6 @@ public class ConsoleTest {
 
     @Test
     public void getMenuChoice_shouldReturnInputFoot() {
-
         Input actual = sut.getMenuChoice("4");
         Input expected = Input.Foot;
 
@@ -116,7 +109,6 @@ public class ConsoleTest {
 
     @Test
     public void getValue_shouldConvertStringNumberToDouble() {
-
         double actual = sut.getValue("0.45");
         double expected = 0.45;
 
@@ -135,7 +127,6 @@ public class ConsoleTest {
 
     @Test
     public void getValue_shouldConvertStringIntToDouble() {
-
         double actual = sut.getValue("1");
         double expected = 1.0;
 
@@ -144,7 +135,6 @@ public class ConsoleTest {
 
     @Test
     public void getValue_shouldConvertStringNegativeOneToDouble() {
-
         double actual = sut.getValue("-1");
         double expected = -1.0;
 
@@ -153,7 +143,6 @@ public class ConsoleTest {
 
     @Test
     public void getWelcomeMessage_shouldReturnCorrectMessage() {
-
         String actual = sut.getWelcomeMessage();
         String expected = "Welcome to converter!\n" +
                 "Which unit do you want to convert to? \n" +
@@ -167,7 +156,6 @@ public class ConsoleTest {
 
     @Test
     public void getConvertFromMessage_shouldReturnCorrectMessage() {
-
         String actual = sut.getConvertFromMessage();
         String expected = "What unit do you want to convert from?\n" +
                 "1: Meter\n" +
@@ -180,7 +168,6 @@ public class ConsoleTest {
 
     @Test
     public void getFinalOutputMessage_shouldReturnCorrectMessage() {
-
         String actual = sut.getFinalOutputMessage(12.3456);
         String expected = "The final result is......:\n" +
                 "12.3456";
@@ -190,7 +177,6 @@ public class ConsoleTest {
 
     @Test
     public void getDoubleToConvertMessage_shouldReturnCorrectMessage() {
-
         String actual = sut.getDoubleToConvertMessage();
         String expected = "Please enter the digit you want to convert with decimal points: \n";
 

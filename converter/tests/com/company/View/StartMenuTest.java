@@ -13,7 +13,6 @@ import static org.junit.Assert.assertEquals;
 
 public class StartMenuTest {
     private StartMenu sut;
-
     private PrintStream sysOut;
     private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
 
@@ -51,6 +50,7 @@ public class StartMenuTest {
 
         assertEquals("hello",  outContent.toString());
     }
+
     @Test
     public void getInput_shouldReturn1() {
         String input = "1";
@@ -59,5 +59,4 @@ public class StartMenuTest {
 
         assertEquals(input, sut.getInput());
     }
-
 }
