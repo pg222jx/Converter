@@ -13,6 +13,7 @@ public class SubApplication {
         String message = startMenu.getWhatViewMessage();
         startMenu.printToConsole(message);
 
+        String input = startMenu.getInput();
         return null;
     }
 
