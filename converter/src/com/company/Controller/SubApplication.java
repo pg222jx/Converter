@@ -2,9 +2,11 @@ package com.company.Controller;
 
 import com.company.View.AView;
 import com.company.View.StartMenu;
+import com.company.View.ViewFactory;
 
 public class SubApplication {
     private StartMenu startMenu;
+    private ViewFactory viewFactory;
 
     /**
      * @return - The by the user chosen view
@@ -14,10 +16,11 @@ public class SubApplication {
         startMenu.printToConsole(message);
 
         String input = startMenu.getInput();
-        return null;
+       return null;
     }
 
-    public SubApplication (StartMenu startMenu) {
+    public SubApplication (StartMenu startMenu, ViewFactory viewFactory) {
         this.startMenu = startMenu;
+        this.viewFactory = viewFactory;
     }
 }
