@@ -35,4 +35,10 @@ public class SubApplicationTest {
         sut.getView();
         verify(startMenuMock).printToConsole(anyString());
     }
+
+    @Test
+    public void getView_shouldCallGetInput() {
+        sut.getView();
+        verify(startMenuMock).getInput();
+    }
 }
