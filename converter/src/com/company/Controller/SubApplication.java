@@ -16,7 +16,8 @@ public class SubApplication {
         startMenu.printToConsole(message);
 
         String input = startMenu.getInput();
-       return null;
+        AView av = viewFactory.getConsoleView(input);
+        return av;
     }
 
     public SubApplication (StartMenu startMenu, ViewFactory viewFactory) {

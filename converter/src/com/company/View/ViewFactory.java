@@ -6,7 +6,7 @@ public class ViewFactory {
      * @param lang String
      * @return - new instance of Console
      */
-    public static AView getConsoleView(String lang) {
+    public AView getConsoleView(String lang) {
         if (lang.equals("1")) {
             return new Console();
         } else {
