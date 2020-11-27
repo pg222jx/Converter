@@ -10,6 +10,7 @@ public class ViewFactoryTest {
 
     @Before
     public void setUp() throws Exception {
+        sut = new ViewFactory();
     }
 
     @After
@@ -18,13 +19,13 @@ public class ViewFactoryTest {
 
     @Test
     public void getConsoleView_shouldReturnConsole() {
-        AView AV = ViewFactory.getConsoleView("1");
+        AView AV = sut.getConsoleView("1");
         assertTrue(AV instanceof Console);
     }
 
     @Test(expected = IllegalArgumentException.class)
     public void getConsoleView_shouldThrowIllegalArgumentExceptionIfNotInput1() {
-        AView AV = ViewFactory.getConsoleView("2");
+        AView AV = sut.getConsoleView("2");
         assertTrue(AV instanceof Console);
     }
 
