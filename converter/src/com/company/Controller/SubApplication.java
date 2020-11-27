@@ -7,7 +7,7 @@ public class SubApplication {
     private StartMenu startMenu;
 
     /**
-     * @return - the by the user chosen view
+     * @return - The by the user chosen view
      */
     public AView getView() {
         String message = startMenu.getWhatViewMessage();

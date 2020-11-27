@@ -10,7 +10,7 @@ public class Application {
     private Console console;
 
     /**
-     * @return the converted value.
+     * @return - The converted value.
      */
     public void start() {
         String message = console.getWelcomeMessage();
